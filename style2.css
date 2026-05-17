@@ -1,0 +1,150 @@
+/* ============================================================
+   Masáže Martin Peringer Brno – stylesheet (část 2/2)
+   ============================================================ */
+
+/* SEKCE PRO SPORTOVCE */
+.sport-section {
+    background:
+        linear-gradient(120deg, rgba(47,58,43,.92), rgba(79,94,70,.85)),
+        url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=70");
+    background-size: cover; background-position: center;
+    color: var(--cream-50); position: relative;
+}
+.sport-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+.sport-image {
+    width: 100%; aspect-ratio: 4/3;
+    background: url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80") center/cover;
+    border-radius: var(--radius); box-shadow: var(--shadow-lg);
+    border: 6px solid rgba(244,237,224,.12);
+}
+.sport-text h2 { color: var(--cream-50); }
+.sport-text p { color: rgba(244,237,224,.9); }
+.sport-text em { color: var(--warm); font-style: italic; }
+.sport-text strong { color: var(--cream-50); }
+.sport-list { list-style: none; padding: 0; margin: 1.5rem 0; display: grid; gap: .75rem; }
+.sport-list li { display: flex; gap: .85rem; align-items: flex-start; padding: .85rem 1rem; background: rgba(244,237,224,.07); border: 1px solid rgba(244,237,224,.14); border-radius: 10px; }
+.sport-list span { flex-shrink: 0; font-family: var(--font-head); font-size: 1.3rem; color: var(--warm); font-weight: 500; }
+.sport-quote { margin: 1.75rem 0 2rem; padding-left: 1.25rem; border-left: 3px solid var(--warm); font-family: var(--font-head); font-size: 1.2rem; font-style: italic; color: var(--cream-100); line-height: 1.5; }
+
+/* O MNĚ */
+.about { background: #faf3e2; }
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.about-text p { color: var(--ink); line-height: 1.75; }
+.about-text em { color: var(--sage-700); }
+.about-text strong { color: var(--sage-900); }
+.about-side { background: var(--white); padding: 1.75rem; border-radius: var(--radius); border: 1px solid rgba(131,95,51,.25); box-shadow: var(--shadow-sm); }
+.quick-facts h3 { font-family: var(--font-body); font-size: .8rem; text-transform: uppercase; letter-spacing: .2em; color: var(--warm-dk); margin-bottom: 1rem; font-weight: 600; }
+.quick-facts dl { margin: 0; }
+.quick-facts dt { font-weight: 600; color: var(--sage-700); font-size: .85rem; margin-top: 1rem; text-transform: uppercase; letter-spacing: .05em; }
+.quick-facts dt:first-child { margin-top: 0; }
+.quick-facts dd { margin: .15rem 0 0; color: var(--ink); line-height: 1.5; }
+
+/* ETIKA */
+.ethics {
+    background:
+        linear-gradient(180deg, rgba(47,58,43,.94), rgba(47,58,43,.94)),
+        url("https://images.unsplash.com/photo-1615225502559-842cbc296205?auto=format&fit=crop&w=1600&q=70");
+    background-size: cover; background-position: center;
+    color: var(--cream-100);
+}
+.ethics h2 { color: var(--cream-50); }
+.ethics .section-lead { color: rgba(244,237,224,.8); }
+.ethics-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.ethic { background: rgba(244,237,224,.05); border: 1px solid rgba(244,237,224,.14); border-radius: var(--radius); padding: 1.75rem 1.5rem; position: relative; backdrop-filter: blur(4px); }
+.ethic-num { font-family: var(--font-head); font-size: 2.5rem; font-weight: 500; color: var(--warm); line-height: 1; margin-bottom: .75rem; }
+.ethic h3 { color: var(--cream-50); margin-bottom: .35rem; }
+.ethic p { color: rgba(244,237,224,.85); margin: 0; line-height: 1.6; font-size: .98rem; }
+
+/* KONTAKT */
+.contact { background: var(--cream-100); }
+.contact .contact-info > p { color: var(--ink); }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.contact-info h2 { margin-bottom: .35em; }
+.contact-info > p { color: var(--ink); margin-bottom: 1.5rem; }
+.contact-list { display: grid; gap: .85rem; margin-bottom: 1.75rem; }
+.contact-list li { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; background: var(--white); border-radius: 12px; border: 1px solid rgba(131,95,51,.25); }
+.ci { width: 44px; height: 44px; border-radius: 50%; background: var(--sage-100); color: var(--sage-700); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.contact-list strong { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 2px; font-weight: 600; }
+.contact-list a, .contact-list span { color: var(--sage-900); font-size: 1.05rem; font-weight: 500; }
+.contact-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+.contact .btn-ghost { color: var(--sage-700); border-color: var(--sage-700); }
+.contact .btn-ghost:hover { background: var(--sage-700); color: var(--cream-50); }
+.contact-map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); background: var(--white); }
+.contact-map iframe { width: 100%; height: 320px; border: 0; display: block; }
+.map-fallback { padding: 1rem 1.25rem; margin: 0; font-size: .9rem; display: flex; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(131,95,51,.25); }
+
+/* GALERIE BZENEC */
+.gallery { background: #faf3e2; position: relative; }
+.gallery-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.gallery-item { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 28px -10px rgba(47,58,43,.35); border: 4px solid var(--white); transition: transform .3s, box-shadow .3s; background: var(--cream-100); }
+.gallery-item:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -12px rgba(47,58,43,.4); }
+.gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform .6s; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-address { text-align: center; margin: 1.5rem 0 0; padding: 1rem 1.5rem; color: var(--sage-900); background: var(--cream-100); border-radius: 999px; display: inline-block; position: relative; left: 50%; transform: translateX(-50%); border: 1px solid rgba(131,95,51,.25); font-size: .95rem; }
+.gallery-address strong { color: var(--warm-dk); }
+
+/* PATIČKA */
+.site-footer { background: var(--sage-900); color: var(--cream-200); padding: 3.5rem 0 1.5rem; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+.brand-footer { color: var(--cream-100); }
+.brand-footer strong { color: var(--cream-50); }
+.brand-footer em { color: var(--warm); }
+.footer-tag { font-family: var(--font-head); font-style: italic; font-size: 1.1rem; color: rgba(244,237,224,.65); margin-top: .75rem; }
+.site-footer h4 { color: var(--cream-50); margin-bottom: 1rem; font-size: .8rem; letter-spacing: .18em; }
+.site-footer ul li { margin-bottom: .4rem; font-size: .92rem; }
+.site-footer a { color: rgba(244,237,224,.8); }
+.site-footer a:hover { color: var(--warm); }
+.footer-bottom { border-top: 1px solid rgba(244,237,224,.12); padding-top: 1.25rem; display: flex; flex-direction: column; gap: .25rem; font-size: .82rem; color: rgba(244,237,224,.55); }
+
+/* FAB – plovoucí tlačítko Zavolat */
+.fab { position: fixed; bottom: 1.25rem; right: 1.25rem; width: 58px; height: 58px; border-radius: 50%; background: var(--warm); color: var(--white); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); z-index: 50; transition: transform .2s, background .2s; }
+.fab:hover { background: var(--warm-dk); color: var(--white); transform: translateY(-2px); }
+
+/* ANIMACE */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease-out, transform .7s ease-out; }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* BREAKPOINTS – tablet (>= 720 px) */
+@media (min-width: 720px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .card-highlight { grid-column: span 2; }
+    .ritual-grid { grid-template-columns: 1fr 1fr; }
+    .ethics-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+    .footer-bottom { flex-direction: row; justify-content: space-between; }
+    .hero-cta { gap: 1rem; }
+    .btn { padding: 1rem 1.75rem; }
+    .evening-grid { flex-direction: row; align-items: center; gap: 2rem; }
+    .evening-cta { white-space: nowrap; }
+    .gallery-grid { grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; gap: 1rem; }
+    .gallery-main { grid-row: span 2; }
+    .gallery-main img { aspect-ratio: 4/5; }
+}
+
+/* BREAKPOINTS – desktop (>= 1024 px) */
+@media (min-width: 1024px) {
+    :root { --header-h: 80px; }
+    .nav-toggle { display: none; }
+    .primary-nav { position: static; background: transparent; border: 0; padding: 0; flex-direction: row; align-items: center; gap: .5rem; transform: none; opacity: 1; pointer-events: auto; box-shadow: none; }
+    .primary-nav a { border: 0; padding: .6rem 1rem; font-size: .95rem; border-radius: 999px; color: var(--sage-700); }
+    .primary-nav a:hover { color: var(--sage-900); background: rgba(111,128,97,.08); }
+    .primary-nav .nav-cta { margin: 0 0 0 .5rem; padding: .65rem 1.4rem; background: var(--warm); color: var(--white); }
+    .primary-nav .nav-cta:hover { background: var(--warm-dk); color: var(--white); }
+    .scroll-indicator { display: block; }
+    .service-grid { grid-template-columns: repeat(4, 1fr); }
+    .card-highlight { grid-column: span 2; }
+    .card-highlight h3 { font-size: 2.1rem; }
+    .ethics-grid { grid-template-columns: repeat(3, 1fr); }
+    .about-grid { grid-template-columns: 1.5fr 1fr; gap: 3.5rem; }
+    .sport-grid { grid-template-columns: 1fr 1.1fr; gap: 3.5rem; }
+    .sport-image { aspect-ratio: 3/4; }
+    .contact-grid { grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+    .contact-map iframe { height: 480px; }
+    .fab { display: none; }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
+a:focus-visible, button:focus-visible { outline: 2px solid var(--warm); outline-offset: 2px; border-radius: 6px; }

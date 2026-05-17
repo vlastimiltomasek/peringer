@@ -1,0 +1,45 @@
+# Masáže Martin Peringer Brno – základní Apache konfigurace
+
+# 1. Vynucení HTTPS + www
+RewriteEngine On
+
+# přesměrování http -> https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# přesměrování non-www -> www (změň, pokud preferuješ opačně)
+RewriteCond %{HTTP_HOST} ^masazeperingerbrno\.cz [NC]
+RewriteRule ^(.*)$ https://www.masazeperingerbrno.cz/$1 [L,R=301]
+
+# 2. Gzip komprese
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/xml image/svg+xml
+</IfModule>
+
+# 3. Cache hlavičky pro statické soubory
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 6 months"
+    ExpiresByType image/png "access plus 6 months"
+    ExpiresByType image/webp "access plus 6 months"
+    ExpiresByType image/svg+xml "access plus 6 months"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# 4. Bezpečnostní hlavičky
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 5. Vypnout listing adresářů
+Options -Indexes
+
+# 6. Vlastní 404
+ErrorDocument 404 /index.html
